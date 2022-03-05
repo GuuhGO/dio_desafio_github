@@ -1,0 +1,29 @@
+1 - Escreva("Qualquer coisa") / Escreva([Variável]) - Escreve na tela a mensagem ou o valor da variável que estão entre os parênteses
+
+2 - Escreval("Qualquer coisa") / Escreval([Variável]) - Escreve na tela a mensagem ou o valor da variável que estão entre os parênteses e em seguida pula uma linha
+
+3 - Leia([Variável]) - Lê um valor que o usuário digitar e atribui-o à variável mencionada nos parênteses]
+
+4 - Operações matemáticas:
+Adição: +
+Subtração: -
+Multiplicação: *
+Divisão: /
+Divisão inteira: \ (utiliza a parte inteira, NÃO arredonda)
+Exponenciação: ^
+Módulo: % (utiliza o resto de uma divisão)
+
+5 - Ordem de precedência de operações matemáticas
+Parênteses () >>> Exponenciação ^ >>> Multiplicação ou Divisão */ >>> Adição ou Subtração
+
+6 - Funções Aritméticas
+Valor absoluto - Abs(-50) = 50 (utiliza somente o número sem a ligação)
+Exponenciação - Exp(3,2) = 9
+Valor inteiro - Int(3.9) = 3
+Raiz quadrada - RaizQ(25) = 5
+Pi - Retorna o número pi (3,1415...)
+Seno em radianos - Sen(O,523 [aproximadamente 30°]) = 0,5
+Cosseno em radiano - Cos(0,523) = 0,86
+Tangente - Tan (0,523) = 0,57
+Graus para Rad - GraupRad(30) = 0,52
+
