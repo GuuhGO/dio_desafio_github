@@ -1,0 +1,13 @@
+algoritmo "Calculo de media entre duas notas"
+var
+   N1, N2: Inteiro
+   M: Real
+inicio
+      Escreval("Digite a primeira nota: ")
+      Leia(N1)
+      Escreval("Digite a segunda nota: ")
+      Leia(N2)
+      M <- (N1+N2)/2
+      Escreval("A media entre", N1, " e", N2, " eh igual a", M)
+      
+fimalgoritmo
