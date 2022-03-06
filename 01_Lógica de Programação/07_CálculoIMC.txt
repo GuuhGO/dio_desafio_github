@@ -1,0 +1,32 @@
+algoritmo "CalculoIMC"
+var
+   imc, m, a: real //IMC, Massa e Altura
+inicio
+
+   Escreval("Massa(kg): ")
+   Leia(m)
+   Escreval("Altura: ")
+   Leia(a)
+   imc <- m/(a ^ 2)
+   Escreva("IMC: ", imc:3:1)
+   Escreval()
+   Se (imc < 18) entao
+      Escreval("Esta abaixo do peso!")
+   senao
+      Se (imc >= 18) e (imc < 25) entao
+         Escreval("Esta no peso ideal")
+      senao
+         Se (imc >= 25) e (imc < 30) entao
+            Escreval("Esta acima do peso!")
+         senao
+            Se (imc >= 30) e (imc < 35) entao
+               Escreval("Atencaoo! Obesidade!")
+            senao
+               Se (imc >= 35) e (imc < 40) entao
+                  Escreval("Muita atencao! Obesidade morbida!")
+               FimSe
+            FimSe
+         FimSe
+      FimSe
+   FimSe
+fimalgoritmo
