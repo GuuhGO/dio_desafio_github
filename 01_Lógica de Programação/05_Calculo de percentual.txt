@@ -1,0 +1,11 @@
+algoritmo "semnome"
+var
+      valor, imposto: real
+inicio
+      Escreva("Digite o valor do produto: R$")
+      Leia(valor)
+      imposto <- valor*0.6
+      Escreval("Devera pagar R$", imposto:4:2, " de imposto")
+      Escreval("Total a pagar: R$", valor+imposto)
+      
+fimalgoritmo
