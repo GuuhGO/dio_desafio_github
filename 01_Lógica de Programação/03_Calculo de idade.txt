@@ -1,0 +1,13 @@
+algoritmo "semnome"
+var
+   idade: Inteiro
+   ano_atual: Inteiro
+   ano_nasci: Inteiro
+inicio
+      Escreva("Digite o ano em que estamos: ")
+      Leia(ano_atual)
+      Escreva("Digite o ano de nascimento: ")
+      Leia(ano_nasci)
+      idade <- ano_atual - ano_nasci
+      Escreva("Sua idade é: ", idade)
+fimalgoritmo
