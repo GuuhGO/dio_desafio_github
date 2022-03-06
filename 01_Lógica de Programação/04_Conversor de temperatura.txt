@@ -1,0 +1,9 @@
+algoritmo "Conversor de temperatura"
+var
+      C, F: Real
+inicio
+      Escreval("Qual e a temperatura aqui?")
+      Leia(F)
+      C <- (F-32)/1.8
+      Escreval("A temperatura em celsius e: ", C:4:1)
+fimalgoritmo
