@@ -1,0 +1,14 @@
+algoritmo "semnome"
+var
+      Emprestimo, Total, Vlr_Parcelas: Real
+      Qnt_Parcelas: Inteiro
+inicio
+      Escreva("Digite o valor do emprestimo: R$")
+      Leia(Emprestimo)
+      Total <- Emprestimo*1.2
+      Escreva("Digite a quantidade de parcelas que quer pagar: ")
+      Leia(Qnt_Parcelas)
+      Vlr_Parcelas <- Total/Qnt_Parcelas
+      Escreval("Total a pagar: R$", Total:4:2, ". Valor de cada parcela: R$", Vlr_Parcelas:4:2)
+      
+fimalgoritmo
