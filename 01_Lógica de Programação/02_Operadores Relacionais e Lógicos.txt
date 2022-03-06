@@ -1,0 +1,20 @@
+algoritmo "semnome"
+var
+   L1, L2, L3: Real
+   Eq, Es, Ei, Tri: Logico
+inicio
+      Escreva("Digite o valor do Lado 1: ")
+      Leia(L1)
+      Escreva("Digite o valor do Lado 2: ")
+      Leia(L2)
+      Escreva("Digite o valor do Lado 3: ")
+      Leia(L3)
+      Tri <- (L1 < L2 + L3) e (L2 < L1 + L3) e (L3 < L1 + L2)
+      Eq <- ((L1 = L2) e (L2 = L3)) e (Tri = Verdadeiro)
+      Es <- (L1 <> L2) e (L2 <> L3) e (L1 <> L3) e (Tri = Verdadeiro)
+      Ei <- (((L1 = L2) e (L3 <> L1)) ou ((L2 = L3) e (L1 <> L2)) ou ((L1 = L3) e (L2 <> L3))) e (Tri = Verdadeiro)
+      Escreval("Pode ser um triangulo? ", Tri)
+      Escreval("O triangulo e equilatero? ", Eq)
+      Escreval("O triangulo e escaleno? ", Es)
+      Escreval("O triangulo e isosceles? ", Ei)
+fimalgoritmo
