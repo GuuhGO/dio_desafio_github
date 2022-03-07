@@ -1,0 +1,21 @@
+algoritmo "Funcoes_Soma"
+var
+   N1, N2, Res: Inteiro //Declarando as variáveis globais
+//--------------------------------------------------------------------------
+Funcao Soma(A, B: Inteiro): Inteiro //Declarando a funcao, os parametros e o
+                                    //tipo de variavel que a funcao retorna
+var
+   S: Inteiro //Variavel local da funcao Soma()
+Inicio
+   S <- A + B
+   Retorne S //Função retorna valor da variável S
+FimFuncao
+//--------------------------------------------------------------------------
+inicio
+   Escreva("Digite um valor: ")
+   Leia(N1)
+   Escreva("Digite um valor: ")
+   Leia(N2)
+   Res <- Soma(N1, N2) //Atribui a Res o resultado que a função Soma() retornou
+   Escreva("A soma dos numeros e: ", Res)
+fimalgoritmo
