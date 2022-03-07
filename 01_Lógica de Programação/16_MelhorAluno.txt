@@ -1,0 +1,23 @@
+algoritmo "MelhorAluno"
+var
+   quant, Cont: Inteiro
+   nota, maior: Real
+   aluno, melhor: caractere
+inicio
+   Escreva("Quantos alunos a turma tem? ")
+   Leia(quant)
+   cont <- 1
+   Enquanto (cont <= quant) faca
+      Escreva("Nome do Aluno", cont, ": ")
+      Leia(aluno)
+      Escreva("Nota de ", aluno, ": ")
+      Leia(nota)
+      Se (nota > maior) entao
+         maior <- nota
+         melhor <- aluno
+      Fimse
+      Escreval()
+      cont <- cont+1
+   Fimenquanto
+   Escreval("O melhor aproveitamento foi de ", melhor, " com a nota", maior)
+fimalgoritmo
