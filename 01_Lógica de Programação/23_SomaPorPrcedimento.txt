@@ -1,0 +1,19 @@
+algoritmo "SomaPorProcedimento"
+var
+   vlr1, vlr2: Inteiro
+Procedimento soma(A, B: Inteiro)
+inicio
+   Escreval("Recebi o valor ", A)
+   Escreval("Recebi o valor ", B)
+   Escreval("A soma vale ", A + B)
+FimProcedimento
+
+inicio
+   Escreva("Digite o 1° valor: ")
+   Leia(vlr1)
+   Escreva("Digite o 2° valor: ")
+   Leia(vlr2)
+   Escreval()
+   soma(vlr1, vlr2)
+
+fimalgoritmo
