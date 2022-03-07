@@ -1,0 +1,26 @@
+algoritmo "Futebol"
+var
+   Pal, Cor, Dif: Inteiro
+inicio
+   Escreval(" PALMEIRAS X CORINTHIANS ")
+   Escreval("-------------------------")
+   Escreva("Quantos gols do Palmeiras? ")
+   Leia(Pal)
+   Escreva("Quantos gols do Corinthians? ")
+   Leia(Cor)
+   Se (Pal > Cor) entao
+      Dif <- Pal - Cor
+   Senao
+      Dif <- Cor - Pal
+   FimSe
+   Escreval()
+   Escolha(Dif)
+      Caso 0
+         Escreval("Empate")
+      Caso 1, 2, 3, 4
+         Escreval("Partida Normal")
+      Caso 5, 6, 7, 8, 9, 10
+         Escreval("Goleada")
+   FimEscolha
+   
+fimalgoritmo
