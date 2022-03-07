@@ -1,0 +1,46 @@
+algoritmo "CorretorDeProvas"
+var
+   gab: vetor[1..5] de caractere
+   aluno: vetor[1..3] de caractere
+   resp: caractere
+   nota: vetor[1..3] de real
+   media: real
+   i, j: Inteiro
+inicio
+   Escreval("Cadastro de Gabarito")
+   Escreval("--------------------")
+   Para i <- 1 ate 5 faca
+      Escreva("Questao", i, ": ")
+      Leia(gab[i])
+   FimPara
+   LimpaTela()
+
+   Para i <- 1 ate 3 faca
+      Escreval("--------------------")
+      Escreval("ALUNO ", i)
+      Escreval("--------------------")
+      Escreva("Nome do aluno: ")
+      Leia(aluno[i])
+      Escreval("RESPOSTAS DADAS")
+      Para j <- 1 ate 5 faca
+         Escreva("Questao", j, ": ")
+         Leia(resp)
+         Se (resp = Copia(gab[j],1,1)) entao
+            nota[i] <- nota[i] + 2
+         FimSe
+      FimPara
+      Escreval("Nota: ", nota[i])
+      LimpaTela()
+   FimPara
+   Escreval("---------------------")
+   Escreval("     NOTAS FINAIS    ")
+   Escreval("---------------------")
+   media <- 0
+   Para i <- 1 ate 3 faca
+      media <- media + nota[i]
+      Escreval(aluno[i]:12, ": ", nota[i]:3:1)
+   FimPara
+   media <- media / 3
+   Escreval()
+   Escreval("Media geral: ", media:3:1)
+fimalgoritmo
