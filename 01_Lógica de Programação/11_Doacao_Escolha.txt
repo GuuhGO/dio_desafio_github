@@ -1,0 +1,30 @@
+algoritmo "Doacao"
+var
+   menu: Inteiro
+   valor: Real
+inicio
+   Escreval("--------------------")
+   Escreval("       DOACAO       ")
+   Escreval("--------------------")
+   Escreval("[1] R$10,00")
+   Escreval("[2] R$20,00")
+   Escreval("[3] R$50,00")
+   Escreval("[4] R$100,00")
+   Leia(menu)
+   Escreval()
+   Escolha(Menu)
+      Caso 1
+         valor <- 10
+      Caso 2
+         valor <- 20
+      Caso 3
+         valor <- 50
+      Caso 4
+         valor <- 100
+   FimEscolha
+   Escreval("---------------------")
+   Escreval("      FINALIZADO     ")
+   Escreval("---------------------")
+   Escreval("Voce doou: R$", valor:5:2)
+
+fimalgoritmo
