@@ -1,0 +1,30 @@
+algoritmo "DetectorDeMaiorPeso"
+var
+   cont1: inteiro
+   nome, pesado: caractere
+   peso, maior: real
+procedimento cabecalho()
+inicio
+   LimpaTela
+   Escreval("--------------------------------------------")
+   Escreval("D E T E C T O R   D E   M A I O R   P E S O")
+   Escreval("Maior peso lido:", maior, "kg")
+   Escreval("--------------------------------------------")
+FimProcedimento
+inicio
+   cabecalho()
+   Para cont1 <- 1 ate 5 faca
+      cabecalho()
+      Escreval("Digite o nome: ")
+      Leia(nome)
+      Escreval("Digite o peso: ")
+      Leia(peso)
+      Se (peso > maior) entao
+         pesado <- nome
+         maior <- peso
+      FimSe
+      cont1 <- cont1 + 1
+   FimPara
+   cabecalho()
+   Escreval("O maior peso lido foi o de ", pesado, " com", maior, "kg")
+fimalgoritmo
