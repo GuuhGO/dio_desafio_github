@@ -1,0 +1,20 @@
+algoritmo "NomesComC_Vetores"
+var
+   nome: Caractere
+   nomeC: vetor[1..5] de Caractere
+   i, totC: Inteiro
+inicio
+   Para i <- 1 ate 5 passo 1 faca
+      Escreva("Digite um nome: ")
+      Leia(nome)
+      Se (Copia(nome, 1, 1) = "C") entao
+         totC <- totC + 1
+         nomeC[totC] <- nome
+
+      FimSe
+   FimPara
+   Escreval()
+   Para i <- 1 ate totC faca
+      Escreval("Nome: ", nomeC[i])
+   FimPara
+fimalgoritmo
