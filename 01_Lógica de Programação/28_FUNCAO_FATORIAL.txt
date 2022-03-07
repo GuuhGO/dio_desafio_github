@@ -1,0 +1,23 @@
+algoritmo "Funcao_Fatorial"
+var
+   N1, R: Inteiro
+Funcao Fatorial(A: Inteiro): Inteiro
+var
+   F: Inteiro
+inicio
+   F <- A
+   Repita
+      Escreva(A, " *")
+      F <- F * (A - 1)
+      A <- A - 1
+   Ate(A = 1)
+   Escreva(A, " =")
+   Retorne F
+FimFuncao
+
+inicio
+   Escreva("Digite um numero: ")
+   Leia(N1)
+   R <- Fatorial(N1)
+   Escreva(R)
+fimalgoritmo
