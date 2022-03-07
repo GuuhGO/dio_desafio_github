@@ -1,0 +1,18 @@
+algoritmo  "LeSeisSomaImpar_PARA"
+var
+   cont, num, qnt, soma: Inteiro
+inicio
+   soma <- 0
+   Para cont <- 1 ate 6 passo 1 faca
+      Escreval("Digite um valor: ")
+      Leia(num)
+      Se ((num >= 0) e (num <= 10)) entao
+         qnt <- qnt + 1
+      FimSe
+      Se (num % 2 = 1) entao
+         soma <- soma + num
+      FimSe
+   FimPara
+   Escreval("Quantidade de valores entre 0 e 10: ", qnt)
+   Escreval("Soma dos valor impares dentro da faixa: ", soma)
+fimalgoritmo
