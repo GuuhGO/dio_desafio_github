@@ -1,0 +1,20 @@
+algoritmo "Fatorial"
+var
+   num, res: inteiro
+   resp: caractere
+inicio
+   Repita
+      Escreval("Digite um numero para fatorar: ")
+      Leia(num)
+      res <- num
+      Repita
+         Escreva(num, " *")
+         res <- res * (num - 1)
+         num <- num - 1
+      Ate(num = 1)
+      Escreval(num, " =", res)
+      Escreva("Deseja continuar? [S/N]")
+      Leia(Resp)
+      LimpaTela
+   Ate (resp = "N") ou (resp = "n")
+fimalgoritmo
