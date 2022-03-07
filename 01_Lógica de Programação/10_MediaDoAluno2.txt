@@ -1,0 +1,20 @@
+algoritmo "MediaDoAluno2"
+var
+   N1, N2, M: Real
+inicio
+   Escreval("Digite a primeira nota: ")
+   Leia(N1) //Armazena a Nota 1
+   Escreval("Digite a segunda nota: ")
+   Leia(N2) //Armazena a Nota 2
+   M <- (N1+N2)/2 //Realiza o cálculo de média
+   Escreval("A media do aluno foi: ", M:3:1) //Escreve a nota que o aluno tirou
+   Se (M >= 7) entao
+      Escreval("Aluno aprovado!")//Se a media for maior que 7 exibe esta mensagem
+   senao
+      Se (M >= 5) entao
+         Escreval("Aluno em recuperacao")//Se a media for entre 5 e 7 é recuperação
+      senao
+         Escreval("Aluno reprovado")
+      FimSe
+   FimSe
+fimalgoritmo
