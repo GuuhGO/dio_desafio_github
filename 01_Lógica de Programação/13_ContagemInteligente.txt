@@ -1,0 +1,24 @@
+algoritmo "ContagemInteligente"
+var
+   a, b, cont: Inteiro
+inicio
+   Escreval("Inicio: ")
+   Leia(a)
+   Escreval("Fim: ")
+   Leia(b)
+   Escreval()
+   Se (a < b) entao
+      cont <- a
+      Enquanto (cont <= b) faca
+          Escreva(cont, " ")
+          cont <- cont + 1
+      Fimenquanto
+   Senao
+      cont <- a
+      Enquanto (cont >= b) faca
+      Escreva(cont, " ")
+      cont <- cont - 1
+      Fimenquanto
+   Fimse
+   
+fimalgoritmo
