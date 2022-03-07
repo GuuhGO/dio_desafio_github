@@ -1,0 +1,26 @@
+algoritmo "NumeroPrimo"
+var
+   num, cont1, cont2: Inteiro
+   resp: Caractere
+inicio
+   Repita
+      cont1 <- 0
+      cont2 <- 0
+      Escreva("Digite um numero: ")
+      Leia(num)
+      Repita
+         Se(num % cont1 = 0) entao
+            cont2 <- cont2 + 1
+         FimSe
+         cont1 <- cont1 + 1
+      Ate(cont1 > num)
+      Se(cont2 > 2)entao
+         Escreval(num, " nao e um numero primo")
+      Senao
+         Escreval(num, " e um numero primo")
+      FimSe
+      Escreval("Deseja continuar? [S/N]")
+      Leia(resp)
+      LimpaTela
+   Ate((resp = "N") ou (resp = "n"))
+fimalgoritmo
