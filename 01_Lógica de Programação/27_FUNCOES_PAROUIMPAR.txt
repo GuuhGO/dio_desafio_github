@@ -1,0 +1,26 @@
+algoritmo "Funcoes_ParOuImpar"
+var
+   N1: Inteiro
+   ver, Resp: Caractere
+Funcao ParOuImpar(A: Inteiro): Caractere
+var
+
+inicio
+   Se (A % 2 = 0) entao
+      Retorne "PAR"
+   Senao
+      Retorne "IMPAR"
+   FimSe
+FimFuncao
+
+inicio
+Repita
+   Escreva("Digite um numero: ")
+   Leia(N1)
+   ver <- ParOuImpar(N1)
+   Escreval("O numero", N1, " e ", ver)
+   Escreva("Deseja continuar? [S/N] ")
+   Leia(Resp)
+   LimpaTela
+Ate ((Resp = "N") ou (Resp = "n"))
+fimalgoritmo
