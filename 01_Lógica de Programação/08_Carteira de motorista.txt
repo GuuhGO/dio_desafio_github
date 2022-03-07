@@ -1,0 +1,23 @@
+algoritmo "CarteiraMotorista"
+var
+   atual, nasc: Inteiro
+inicio
+   Escreval("-------------------------")
+   Escreval("Departamento de transito")
+   Escreval("-------------------------")
+   Escreva("Diga o ano atual (yyyy): ")
+   Leia(atual)
+   Escreva("Diga o ano de nascimento (yyyy): ")
+   Leia(nasc)
+   Escreval()
+   Escreval("---------")
+   Escreval("Status")
+   Escreval("---------")
+   Escreval("Sua idade: ", atual-nasc)
+   Se (atual-nasc >= 18) entao
+      Escreval("Esta apto para tirar a carteira de motorista")
+   senao
+      Escreval("Nao esta apto para tirar a carteira de motorista")
+   FimSe
+
+fimalgoritmo
