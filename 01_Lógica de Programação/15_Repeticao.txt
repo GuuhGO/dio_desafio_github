@@ -1,0 +1,17 @@
+algoritmo "MeioTrianguloRepeticao"
+var
+   alt, a, b: Inteiro
+inicio
+   a <- 1
+   Escreval("Digite a altura: ")
+   Leia(alt)
+   Enquanto a <= alt faca
+      b <- 0
+      Enquanto b < a faca
+         Escreva("*")
+         b <- b + 1
+      FimEnquanto
+      a <- a + 1
+      Escreval()
+   FimEnquanto
+fimalgoritmo
