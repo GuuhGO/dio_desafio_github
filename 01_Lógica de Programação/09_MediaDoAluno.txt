@@ -1,0 +1,21 @@
+algoritmo "semnome"
+var
+   N1, N2, N3, N4, M: Real
+inicio
+   Escreval("Digite a nota do primeiro bimestre")
+   Leia(N1)
+   Escreval("Digite a nota do segundo bimestre")
+   Leia(N2)
+   Escreval("Digite a nota do terceiro bimestre")
+   Leia(N3)
+   Escreval("Digite a nota do quarto bimestre")
+   Leia(N4)
+   Escreval()
+   M <- (N1+N2+N3+N4)/4
+   Escreval("Media das notas: ", M:3:1)
+   Se (M >= 7) entao
+      Escreval("Aluno aprovado!")
+   Senao
+      Escreval("Aluno reprovado!")
+   FimSe
+fimalgoritmo
