@@ -1,0 +1,50 @@
+algoritmo "MatrizDe4Ordem"
+var
+   m: vetor[1..4, 1..4] de Inteiro
+   a, b: Inteiro
+   SomaDiag: Inteiro
+   Prod2L: Inteiro
+   maior: Inteiro
+inicio
+   Prod2L <- 1
+   Para a <- 1 ate 4 faca
+      Para b <- 1 ate 4 faca
+         Escreva("Digite o valor da posicao [", a:1, ",", b:1, "]: ")
+         Leia(m[a,b])
+         Se (a = b) entao
+            SomaDiag <- SomaDiag + m[a,b])
+         FimSe
+         Se (a = 2) entao
+            Prod2L <- Prod2L * m[a,b]
+         FimSe
+      FimPara
+   FimPara
+
+   Escreval()
+
+   Para a <- 1 ate 4 faca
+      Para b <- 1 ate 4 faca
+         Escreva("[", m[a,b]:2, "]")
+      FimPara
+      Escreval()
+   FimPara
+   Escreval()
+   
+   
+   Escreval("Soma da diagonal principal: ", SomaDiag)
+   Escreva("Produto segunda linha: ")
+   Para b <- 1 ate 4 faca
+      Escreva(m[2,b]:1)
+      Se (b <> 4) entao
+         Escreva(" * ")
+      FimSe
+   FimPara
+   Escreval(" = ", Prod2L)
+   Para a <- 1 ate 4 faca
+      Se(m[a,3] > maior) entao
+         maior <- m[a,3]
+      FimSe
+   FimPara
+   Escreval("Maior valor da terceira coluna: ", maior)
+   
+fimalgoritmo
