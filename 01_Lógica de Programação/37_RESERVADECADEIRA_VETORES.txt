@@ -1,0 +1,29 @@
+algoritmo "ReservaDeCadeira"
+var
+   B: vetor[1..10] de Logico
+   resp, i: Inteiro
+   sair: Caractere
+inicio
+   Repita
+      Para i <- 1 ate 10 faca
+         Se (B[i] = Falso) entao
+            Escreva("[B", i:1, "]")
+         Senao
+            Escreva("[---]")
+         FimSe
+      FimPara
+      Escreval()
+      Escreva("Reservar a cadeira: B")
+      Leia(resp)
+      Se (B[resp] = verdadeiro) entao
+         Escreval("ERRO!! Cadeira ja reservada!")
+      Senao
+         B[resp] <- Verdadeiro
+         Escreval("Cadeira B", resp:1, " reservada.")
+      FimSe
+
+      Escreva("Deseja reservar outra? [S/N]: ")
+      Leia(sair)
+      LimpaTela
+   Ate(sair = "N")
+fimalgoritmo
