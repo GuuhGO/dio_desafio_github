@@ -1,0 +1,83 @@
+algoritmo "DissecandoMatrizes"
+var
+   m: vetor[1..4, 1..4] de Inteiro
+   a, b, menu: Inteiro
+inicio
+//LEITURA DE VALORES DA MATRIZ
+   Para a <- 1 ate 4 faca
+      Para b <- 1 ate 4 faca
+         Escreva("Digite o valor da posicao [", a:1, ",", b:1, "]: ")
+         Leia(m[a,b])
+      FimPara
+   FimPara
+   LimpaTela()
+   
+   Enquanto (menu <> 5) faca
+   //MENU DE OPCOES
+      Escreval("MENU DE OPCOES")
+      Escreval("-----------------------")
+      Escreval("[1] Mostrar a matriz")
+      Escreval("[2] Diagonal principal")
+      Escreval("[3] Triangulo superior")
+      Escreval("[4] Triangulo inferior")
+      Escreval("[5] Sair")
+      Escreval("-----------------------")
+      Leia(menu)
+      LimpaTela()
+      Escolha(menu)
+   //EXIBE A MATRIZ INTEIRA
+         Caso 1
+            Para a <- 1 ate 4 faca
+               Para b <- 1 ate 4 faca
+                  Escreva("[", m[a,b]:2, "] ")
+               FimPara
+               Escreval()
+            FimPara
+            Escreval()
+
+   //EXIBE A DIAGONAL PRINCIPAL
+         Caso 2
+            Para a <- 1 ate 4 faca
+               Para b <- 1 ate 4 faca
+                  Se (a = b) entao
+                     Escreva("[", m[a,b]:2, "] ")
+                  Senao
+                     Escreva("     ")
+                  FimSe
+               FimPara
+               Escreval()
+            FimPara
+
+   //EXIBE O TRIANGULO SUPERIOR
+         Caso 3
+            Para a <- 1 ate 4 faca
+               Para b <- 1 ate 4 faca
+                  Se (b > a) entao
+                     Escreva("[", m[a,b]:2, "] ")
+                  Senao
+                     Escreva("     ")
+                  FimSe
+               FimPara
+               Escreval()
+            FimPara
+            Escreval()
+            
+   //EXIBE O TRIANGULO INFERIOR
+         Caso 4
+            Para a <- 1 ate 4 faca
+               Para b <- 1 ate 4 faca
+                  Se (b < a) entao
+                     Escreva("[", m[a,b], "] ")
+                  Senao
+                     Escreva("     ")
+                  FimSe
+               FimPara
+               Escreval()
+            FimPara
+            Escreval()
+
+      FimEscolha
+   FimEnquanto
+   
+
+fimalgoritmo
