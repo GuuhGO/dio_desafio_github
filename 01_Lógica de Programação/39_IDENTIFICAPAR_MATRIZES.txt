@@ -1,0 +1,32 @@
+algoritmo "IdentificarPar"
+var
+   m: vetor[1..3, 1..3] de Inteiro
+   a, b: Inteiro
+   TotPar: Inteiro
+inicio
+   Para a <- 1 ate 3 faca
+      Para b <- 1 ate 3 faca
+         Escreva("Digite o valor de m[", a:1, ",", b:1, "]: ")
+         Leia(m[a,b])
+      FimPara
+   FimPara
+
+   Escreval()
+   
+   Escreval("MATRIZ")
+   Escreval("-----------------")
+   Para a <- 1 ate 3 faca
+      Para b <- 1 ate 3 faca
+         Se (m[a,b] % 2 = 0) entao
+            //Escreval("Numero par na posicao [", a:1, ",", b:1, "]: ", m[a,b])
+            Escreva(" [", m[a,b]:2, "] ")
+            TotPar <- TotPar + 1
+         Senao
+            Escreva("  ", m[a,b]:2, "  ")
+         FimSe
+      FimPara
+      Escreval()
+   FimPara
+   Escreval()
+   Escreval("Foram digitados", TotPar, " numeros pares")
+fimalgoritmo
