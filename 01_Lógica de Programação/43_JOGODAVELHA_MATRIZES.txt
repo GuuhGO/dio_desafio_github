@@ -1,0 +1,265 @@
+algoritmo "semnome"
+var
+   m: vetor[1..3, 1..3] de Inteiro
+   a, b, c, resp, cont, win: Inteiro
+   j1, erro, fim: Logico
+//--------------------------------------------------------
+Funcao TestaJogo(): Inteiro
+var
+inicio
+//--------------------------------------------------------
+{Este trecho faz os testes de todas as linhas da matriz}
+   Retorne 0
+   a <- 1
+   cont <- 0
+   Enquanto (a <= 3) faca
+      cont <- 0
+       b <- 1
+      Enquanto (b <= 3) faca
+         Se (m[a,b] = 0) entao
+            cont <- cont + 1
+         Senao
+            Se (m[a,b] = -1) entao
+               cont <- cont - 1
+            FimSe
+         FimSe
+         b <- b + 1
+      FimEnquanto
+      Se (cont = 3) entao
+         Retorne cont
+      Senao
+         Se (cont = -3) entao
+            Retorne cont
+         FimSe
+      FimSe
+      a <- a + 1
+   FimEnquanto
+//--------------------------------------------------------
+
+{Este trecho faz os testes de todas as colunas}
+   a <- 1
+   cont <- 0
+   Enquanto (a <= 3) faca
+      cont <- 0
+       b <- 1
+      Enquanto (b <= 3) faca
+         Se (m[b,a] = 0) entao
+            cont <- cont + 1
+         Senao
+            Se (m[b,a] = -1) entao
+               cont <- cont - 1
+            FimSe
+         FimSe
+         b <- b + 1
+      FimEnquanto
+      Se (cont = 3) entao
+         Retorne cont
+      Senao
+         Se (cont = -3) entao
+            Retorne cont
+         FimSe
+      FimSe
+      a <- a + 1
+   FimEnquanto
+//--------------------------------------------------------
+   
+{Este trecho testa a diagonal da esquerda para a direita}
+   a <- 1
+   b <- 0
+   cont <- 0
+   Enquanto (a <= 3) faca
+      Se (m[a,a] = 0) entao
+         cont <- cont + 1
+      Senao
+         Se (m[a,a] = -1) entao
+            cont <- cont - 1
+         FimSe
+      FimSe
+      a <- a + 1
+   FimEnquanto
+   Se (cont = 3) entao
+         Retorne cont
+      Senao
+         Se (cont = -3) entao
+            Retorne cont
+         FimSe
+   FimSe
+//--------------------------------------------------------
+
+{Este trecho testa a diagonal da direita para a esquerda}
+   a <- 1
+   b <- 3
+   cont <- 0
+   Enquanto (a <= 3) faca
+      Se (m[a,b] = 0) entao
+         cont <- cont + 1
+      Senao
+         Se (m[a,b] = -1) entao
+            cont <- cont - 1
+         FimSe
+      FimSe
+      a <- a + 1
+      b <- b - 1
+   FimEnquanto
+   Se (cont = 3) entao
+         Retorne cont
+      Senao
+         Se (cont = -3) entao
+            Retorne cont
+         FimSe
+   FimSe
+
+FimFuncao
+{Procedimento que atribui o valor 0 no índice quando for X ou atribui -1
+{quando for O}
+Procedimento atrib(x, y: Inteiro)
+var
+inicio
+   Se ((m[x,y] = 0) ou (m[x,y] = -1)) entao
+      erro <- verdadeiro
+   Senao
+      erro <- falso
+      Se (j1 = falso) entao
+         m[x,y] <- 0
+      Senao
+         m[x,y] <- -1
+      FimSe
+   FimSe
+FimProcedimento
+//--------------------------------------------------------
+
+{Este procedimento exibe o jogo da velha com seus valores atualizados}
+Procedimento JogoDaVelha()
+var
+inicio
+   Para a <- 1 ate 3 faca
+         Escreval("+---+---+---+")
+         Para b <- 1 ate 3 faca
+            Se (m[a,b] = -1) entao
+               Escreva("|  O")
+            Senao
+               Se (m[a,b] = 0) entao
+                  Escreva("|  X")
+               Senao
+                  Escreva("| ", m[a,b]:2)
+               FimSe
+            FimSe
+            Se (b = 3) entao
+               Escreva("|")
+            FimSe
+         FimPara
+         Escreval()
+      FimPara
+      Escreval("+---+---+---+")
+      Escreval()
+FimProcedimento
+//--------------------------------------------------------
+
+{Início principal do algoritmo}
+inicio
+{Atribuição de valores para as variáveis}
+   fim <- falso
+   j1 <- falso
+   erro <- falso
+   c <- 1
+   win <- 0
+//--------------------------------------------------------
+
+{Atribui os valores de 0 à 9 nas respectivas posições da matriz}
+   Para a <- 1 ate 3 faca
+      Para b <- 1 ate 3 faca
+         m[a,b] <- c
+         c <- c + 1
+      FimPara
+   FimPara
+//--------------------------------------------------------
+
+{Entra no loop até o jogo acabar com o empate ou vitória}
+   Repita
+      JogoDaVelha()
+      win <- 0
+//--------------------------------------------------------
+
+{Indica que a posição escolhida pelo usuário anteriormente já foi preenchida}
+      Se (erro = verdadeiro) entao
+         Escreval("POSIÇÃO JÁ PREENCHIDA!")
+      FimSe
+//--------------------------------------------------------
+
+{Lê a posição que o jogador escolheu}
+      Se (j1 = falso) entao
+         Escreval("Em qual posição deseja jogar (X)?")
+         Leia(resp)
+      Senao
+         Escreval("Em qual posição deseja jogar (0)?")
+         Leia(resp)
+      FimSe
+//--------------------------------------------------------
+
+{Cada caso do Escolha atribui o valor lido na respectiva posição}
+      Escolha(resp)
+         Caso 1
+            atrib(1,1)
+         Caso 2
+            atrib(1,2)
+         Caso 3
+            atrib(1,3)
+         Caso 4
+            atrib(2,1)
+         Caso 5
+            atrib(2,2)
+         Caso 6
+            atrib(2,3)
+         Caso 7
+            atrib(3,1)
+         Caso 8
+            atrib(3,2)
+         Caso 9
+            atrib(3,3)
+      FimEscolha
+//--------------------------------------------------------
+
+{Troca a rodada do jogador X para o jogador O e vice-versa}
+      Se (erro = falso) entao
+         j1 <- nao j1
+      FimSe
+      LimpaTela()
+//--------------------------------------------------------
+      
+{Verifica se todas as posições já foram preenchidas ocasionando num empate}
+      c <- 0
+      Para a <- 1 ate 3 faca
+         Para b <- 1 ate 3 faca
+            Se ((m[a,b] = 0) ou (m[a,b] = -1)) entao
+               c <- c + 1
+            FimSe
+         FimPara
+      FimPara
+      Se (c = 9) entao
+         fim <- verdadeiro
+      FimSe
+//--------------------------------------------------------
+
+{Verifica se houve algum vencedor para finalizar o jogo}
+      win <- TestaJogo()
+      Se (win = 3) ou (win = -3) entao
+         fim <- verdadeiro
+      FimSe
+   ate(fim = verdadeiro)
+//--------------------------------------------------------
+
+{Exibe o resultado da partida}
+   JogoDaVelha()
+   Se (win = 3) entao
+      Escreval("Jogador X venceu!!")
+   Senao
+      Se (win = -3) entao
+         Escreval("Jogador O venceu!!")
+      Senao
+         Escreval("DEU VELHA! EMPATOU")
+      FimSe
+   FimSe
+   Escreval("Partida finalizada!")
+   
+fimalgoritmo
+
